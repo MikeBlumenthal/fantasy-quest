@@ -1,6 +1,5 @@
 package Players;
 
-import Interfaces.IDefend;
 import Items.Item;
 
 import java.util.ArrayList;
