@@ -2,18 +2,19 @@ package Items;
 
 public class Armor extends Item {
 
-    private int hitpoints;
 
-    public Armor(String name, int hitpoints) {
+    private int hitPoints;
+
+    public Armor(String name, int hitPoints) {
         super(name);
-        this.hitpoints = hitpoints;
+        this.hitPoints = hitPoints;
     }
 
-    public int getHitpoints() {
-        return hitpoints;
+    public int getHitPoints() {
+        return hitPoints;
     }
 
     public void takeHit(int damage) {
-        hitpoints -= damage;
+        hitPoints -= damage;
     }
 }

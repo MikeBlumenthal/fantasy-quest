@@ -19,13 +19,15 @@ public class ArmorTest {
     }
 
     @Test
-    public void hasHitpoints() {
-        assertEquals(20, armor.getHitpoints());
+
+    public void hasHitPoints() {
+        assertEquals(20, armor.getHitPoints());
     }
 
     @Test
     public void takesHit() {
         armor.takeHit(10);
-        assertEquals(10, armor.getHitpoints());
+
+        assertEquals(10, armor.getHitPoints());
     }
 }
