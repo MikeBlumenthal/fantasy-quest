@@ -6,7 +6,7 @@ import Items.Weapon;
 
 import Players.Player;
 
-public class Fighter extends Player implements IAttack, IDefend {
+public abstract class Fighter extends Player implements IAttack, IDefend {
     private Weapon inHand;
 
     public Fighter(String name, int hitPoints) {
@@ -22,10 +22,4 @@ public class Fighter extends Player implements IAttack, IDefend {
         inHand = weapon;
     }
 
-    public int attack(IDefend target) {
-        return 0;
-    }
-
-    public void defend(IAttack attacker) {
-    }
 }
