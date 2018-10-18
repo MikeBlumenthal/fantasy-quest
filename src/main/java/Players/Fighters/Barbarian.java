@@ -17,4 +17,8 @@ public class Barbarian extends Fighter {
     public void defend(IAttack attacker) {
 
     }
+
+    public int doubleDamageHit() {
+        return getInHand().getDamage() * 2;
+    }
 }
