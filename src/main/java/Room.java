@@ -10,6 +10,7 @@ public class Room {
 
     public Room(Enemy enemy){
         this.enemy = enemy;
+        this.rewards = new ArrayList<>();
     }
 
     public ArrayList<Item> getRewards() {
@@ -18,5 +19,9 @@ public class Room {
 
     public Enemy getEnemy() {
         return enemy;
+    }
+
+    public void addRewards(Item item) {
+        this.rewards.add(item);
     }
 }
