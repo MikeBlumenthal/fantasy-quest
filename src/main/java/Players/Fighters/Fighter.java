@@ -8,8 +8,8 @@ import Players.Player;
 import java.util.ArrayList;
 
 public class Fighter extends Player implements IAttack, IDefend {
-    public Fighter(String name, int hitPoints, ArrayList<Item> bag) {
-        super(name, hitPoints, bag);
+    public Fighter(String name, int hitPoints) {
+        super(name, hitPoints);
     }
 
     @Override

@@ -8,8 +8,8 @@ import Players.Player;
 import java.util.ArrayList;
 
 public class Barbarian extends Player implements IAttack, IDefend {
-    public Barbarian(String name, int hitPoints, ArrayList<Item>bag){
-        super(name, hitPoints, bag);
+    public Barbarian(String name, int hitPoints){
+        super(name, hitPoints);
     }
 
     @Override
