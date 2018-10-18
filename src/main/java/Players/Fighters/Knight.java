@@ -2,8 +2,7 @@ package Players.Fighters;
 
 import Interfaces.IAttack;
 import Interfaces.IDefend;
-import Items.Item;
-import Players.Player;
+
 
 
 public class Knight extends Fighter  {

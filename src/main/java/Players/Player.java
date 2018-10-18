@@ -5,7 +5,7 @@ import Items.Item;
 
 import java.util.ArrayList;
 
-public abstract class Player implements IDefend{
+public abstract class Player{
     String name;
     int hitPoints;
     ArrayList<Item> bag;
