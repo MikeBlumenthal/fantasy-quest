@@ -7,7 +7,7 @@ import Players.Player;
 
 import java.util.ArrayList;
 
-public class Barbarian extends Player implements IAttack, IDefend {
+public class Barbarian extends Fighter {
     public Barbarian(String name, int hitPoints){
         super(name, hitPoints);
     }

@@ -7,7 +7,7 @@ import Players.Player;
 
 import java.util.ArrayList;
 
-public class Dwarf extends Player implements IAttack, IDefend {
+public class Dwarf extends Fighter {
     public Dwarf(String name, int hitPoints){
         super(name, hitPoints);
     }

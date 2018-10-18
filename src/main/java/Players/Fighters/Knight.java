@@ -6,7 +6,7 @@ import Items.Item;
 import Players.Player;
 
 
-public class Knight extends Player implements IAttack, IDefend {
+public class Knight extends Fighter  {
     public Knight(String name, int hitPoints) {
         super(name, hitPoints);
     }
@@ -15,7 +15,6 @@ public class Knight extends Player implements IAttack, IDefend {
     public int attack(IDefend target) {
         return 0;
     }
-
 
     @Override
     public void defend(IAttack attacker) {
