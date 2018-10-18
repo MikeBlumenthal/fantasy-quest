@@ -2,10 +2,6 @@ package Players.Fighters;
 
 import Interfaces.IAttack;
 import Interfaces.IDefend;
-import Items.Item;
-import Players.Player;
-
-import java.util.ArrayList;
 
 public class Barbarian extends Fighter {
     public Barbarian(String name, int hitPoints){
