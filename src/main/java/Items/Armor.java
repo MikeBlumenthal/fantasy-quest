@@ -1,4 +1,7 @@
 package Items;
 
-public class Armor {
+public class Armor extends Item {
+    public Armor(String name) {
+        super(name);
+    }
 }
