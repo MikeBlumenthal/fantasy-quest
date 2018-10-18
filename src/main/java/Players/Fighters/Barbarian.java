@@ -13,7 +13,6 @@ public class Barbarian extends Fighter {
         return 0;
     }
 
-
     @Override
     public void defend(IAttack attacker) {
 

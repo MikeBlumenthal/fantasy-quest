@@ -27,4 +27,13 @@ public abstract class Player{
     public ArrayList<Item> getBag(){
         return bag;
     }
+
+    public void addToBag(Item item){
+        bag.add(item);
+    }
+
+    public Item getFromBag(Item item){
+        int i = this.bag.indexOf(item);
+        return bag.remove(i);
+    }
 }
