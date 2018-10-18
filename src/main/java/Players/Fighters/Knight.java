@@ -2,27 +2,29 @@ package Players.Fighters;
 
 import Interfaces.IAttack;
 import Interfaces.IDefend;
+import Items.Armour;
 
-public class Knight extends Fighter  {
-
-    private int armourHitPoints;
+public class Knight extends Fighter implements IDefend{
+    private Armour currentArmour;
 
     public Knight(String name, int hitPoints) {
         super(name, hitPoints);
-        this.armourHitPoints = 100;
+        this.currentArmour = null;
+    }
+
+    public void changeArmour(Armour armour){
+        currentArmour = armour;
     }
 
     @Override
-    public int attack(IDefend target) {
-        return 0;
+    public void defend(int damage){
+        int mitigatedDamage = 0;
+        if (currentArmour != null){
+            mitigatedDamage = damage - currentArmour.getArmourPoints();
+        }
+        int newHP = getHitPoints() - mitigatedDamage;
+        setHitPoints(newHP);
     }
 
-    @Override
-    public void defend(IAttack attacker) {
-        // check if armour is fully damaged before hitting hitpoints
-    }
 
-    public int getArmourHitPoints() {
-        return armourHitPoints;
-    }
 }

@@ -32,7 +32,7 @@ public class BarbarianTest {
     }
 
     @Test
-    public void weildsWeapon() {
+    public void wieldsWeapon() {
         barbarian.changeWeapon(weapon);
         assertEquals("Longsword", barbarian.getInHand().getName());
     }

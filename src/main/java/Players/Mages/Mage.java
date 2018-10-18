@@ -7,7 +7,7 @@ import Items.Companion;
 import Items.Spell;
 import Players.Player;
 
-public abstract class Mage extends Player implements IAttack, IDefend{
+public abstract class Mage extends Player implements IAttack{
     private Spell currentSpell;
     private Companion companion;
 

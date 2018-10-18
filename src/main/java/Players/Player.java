@@ -1,10 +1,11 @@
 package Players;
 
+import Interfaces.IDefend;
 import Items.Item;
 
 import java.util.ArrayList;
 
-public abstract class Player{
+public abstract class Player implements IDefend{
     String name;
     int hitPoints;
     ArrayList<Item> bag;
@@ -23,6 +24,10 @@ public abstract class Player{
         return hitPoints;
     }
 
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+
     public ArrayList<Item> getBag(){
         return bag;
     }
@@ -34,5 +39,12 @@ public abstract class Player{
     public Item getFromBag(Item item){
         int i = this.bag.indexOf(item);
         return bag.remove(i);
+    }
+
+    @Override
+    public void defend(int damage) {
+        int HP = getHitPoints();
+        int newHP = HP - damage;
+        this.setHitPoints(newHP);
     }
 }

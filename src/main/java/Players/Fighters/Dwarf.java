@@ -8,15 +8,4 @@ public class Dwarf extends Fighter {
     public Dwarf(String name, int hitPoints){
         super(name, hitPoints);
     }
-
-    @Override
-    public int attack(IDefend target) {
-        return 0;
-    }
-
-
-    @Override
-    public void defend(IAttack attacker) {
-
-    }
 }

@@ -6,7 +6,7 @@ import Items.Weapon;
 
 import Players.Player;
 
-public abstract class Fighter extends Player implements IAttack, IDefend {
+public abstract class Fighter extends Player implements IAttack{
     private Weapon inHand;
 
     public Fighter(String name, int hitPoints) {
@@ -20,6 +20,12 @@ public abstract class Fighter extends Player implements IAttack, IDefend {
 
     public void changeWeapon(Weapon weapon){
         inHand = weapon;
+    }
+
+    @Override
+    public void attack(IDefend target){
+        int damage = getInHand().getDamage();
+        target.defend(damage);
     }
 
 }
