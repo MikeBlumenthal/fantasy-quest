@@ -1,4 +1,3 @@
-import Items.Item;
 import Items.Weapon;
 import Players.Fighters.Knight;
 import org.junit.Before;
@@ -8,12 +7,12 @@ import static org.junit.Assert.assertEquals;
 
 public class KnightTest {
     Knight knight;
-    Item weapon;
+    Weapon weapon;
 
     @Before
     public void before(){
         knight = new Knight("Knight1", 10);
-//        weapon = new Weapon(sword);
+        weapon = new Weapon("Longsword", 20);
     }
 
     @Test
@@ -36,9 +35,14 @@ public class KnightTest {
         assertEquals(null, knight.getInHand());
     }
 
-//    @Test
-//    public void hasWeapon()
+    @Test
+    public void weildsWeapon() {
+        knight.changeWeapon(weapon);
+        assertEquals("Longsword", knight.getInHand().getName());
+    }
 
-
-
+    @Test
+    public void hasArmour() {
+        assertEquals(100, knight.getArmourHitPoints());
+    }
 }
